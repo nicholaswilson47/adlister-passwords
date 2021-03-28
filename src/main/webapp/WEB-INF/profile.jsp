@@ -10,6 +10,25 @@
 
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
+        <h1>Here are all of your ads!</h1>
+    </div>
+    <div class ="card" style ="width: 18rem;">
+        <div class ="card-body">
+            <div class ="col-md-6 row">
+                <div>
+                    <h6 class ="card-subtitle mb-2"><c:out value="${userad.title}"/></h6>
+                    <p class = "card-text"><c:out value="${userad.description}"/></p>
+                </div>
+                <form action="/updateAdServlet" method="post">
+                    <div class="form-group">
+                        <br>
+                        <label for="Id">Update Ad</label>
+                        <input id = "Id" name="Id" class="form-control" hidden type="text" value="${userad.id}">
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </div>
 
 </body>
