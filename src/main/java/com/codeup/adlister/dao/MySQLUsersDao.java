@@ -1,5 +1,6 @@
 package com.codeup.adlister.dao;
 
+import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
@@ -61,6 +62,11 @@ public class MySQLUsersDao implements Users {
         } catch (SQLException e) {
             throw new RuntimeException("Error finding a user by username", e);
         }
+    }
+
+    @Override
+    public Ad individualAd(Long id) {
+        return null;
     }
 
     private User extractUser(ResultSet rs) throws SQLException {
