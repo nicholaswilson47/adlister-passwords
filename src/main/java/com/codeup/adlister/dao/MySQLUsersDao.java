@@ -50,6 +50,15 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error creating new user", e);
         }
     }
+    @Override
+    public User findUserByID(long userId) {
+        String query = "SELECT * FROM users WHERE id = ? ";
+        try {
+
+        } catch (SQLException e) {
+
+        }
+    }
 
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
