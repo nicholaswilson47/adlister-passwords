@@ -54,6 +54,12 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
+    //update profile
+    @Override
+    public void updateProfile(String username, String password, String email, long id) {
+
+    }
+
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
