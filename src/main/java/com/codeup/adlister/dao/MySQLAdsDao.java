@@ -59,6 +59,24 @@ public class MySQLAdsDao implements Ads {
     public void updateProfile(String username, String password, String email, long id) {
 
     }
+    @Override
+    public List<Ad> deleteAd(long id) {
+
+        String sql = "DELETE FROM ads WHERE id LIKE ?";
+        String deletead = "%" + id + "%";
+        try {
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, deletead);
+
+            int rowsDeleted = statement.executeUpdate();
+            if (rowsDeleted > 0) {
+                System.out.println("A user was deleted successfully!");
+            }
+        }catch (SQLException throwables){
+            throwables.printStackTrace();
+        }
+        return null;
+    }
 
 
     private Ad extractAd(ResultSet rs) throws SQLException {
