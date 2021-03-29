@@ -1,9 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <jsp:include page="partials/head.jsp">
+        <jsp:param name="title" value="Edit your information!" />
+    </jsp:include>
 
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/bootstrap.jsp" />
+<jsp:include page="partials/navbar.jsp" />
 <div class="container">
     <h2>Edit your profile information here.</h2>
     <form action="/edit-profile" method="post">

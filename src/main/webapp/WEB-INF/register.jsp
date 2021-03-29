@@ -4,9 +4,11 @@
     <jsp:include page="partials/head.jsp">
         <jsp:param name="title" value="Register For Our Site!" />
     </jsp:include>
+    <jsp:include page="/WEB-INF/partials/bootstrap.jsp"/>
+    <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 </head>
 <body>
-    <jsp:include page="partials/navbar.jsp" />
+
     <div class="container">
         <h1>Please fill in your information.</h1>
         <form action="/register" method="post">
