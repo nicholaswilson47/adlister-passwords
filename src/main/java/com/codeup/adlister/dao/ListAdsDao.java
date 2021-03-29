@@ -31,6 +31,7 @@ public class ListAdsDao implements Ads {
     public Ad individualAd(Long id) {
         return null;
     }
+
     @Override
     public List<Ad> updateAd(long id, String title, String description) {
         return null;
