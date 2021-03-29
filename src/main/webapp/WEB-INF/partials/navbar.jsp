@@ -8,14 +8,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <c:if test="${sessionScope.user == null}">
-            <li class="nav-item">
+            <div class = "m-1">
+                <li class="nav-item ">
                 <a class ="nav-link" href="/login">Login</a>
-            </li>
+                </li>
+            </div>
             </c:if>
             <c:if test="${sessionScope.user == null}">
+            <div class = "m-1">
             <li class="nav-item">
                 <a class ="nav-link" href="/register">Register</a>
             </li>
+            </div>
             </c:if>
             <c:if test="${sessionScope.user == null}">
             <li class="nav-item">
