@@ -80,5 +80,19 @@ public class MySQLUsersDao implements Users {
             rs.getString("password")
         );
     }
+    public void updateProfile(String username, String userEmail, String password , long id) {
+        String queryInsert = "UPDATE users as u SET u.username = ?, u.email = ?, u.password = ? WHERE id = ?";
+        try {
+            System.out.println(username + "=" + password + " " + userEmail);
+            PreparedStatement stmt = connection.prepareStatement(queryInsert);
+            stmt.setString(1, username);
+            stmt.setString(2, userEmail);
+            stmt.setString(3, password);
+            stmt.setLong(4, id);
+            stmt.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error", e);
+        }
+    }
 
 }
