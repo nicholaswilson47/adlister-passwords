@@ -24,12 +24,17 @@
                         <br>
                         <label for="Id">Update Ad</label>
                         <input id = "Id" name="Id" class="form-control" hidden type="text" value="${userad.id}">
+                        <label for="title">update title</label>
+                        <input id="title" name="title" class="form-control"  type="text"  value="${userad.title}">
+                        <label for="descript">update description</label>
+                        <input id="descript" name="descript" class="form-control"  type="text"  value="${userad.description}">
                     </div>
                 </form>
             </div>
         </div>
 
     </div>
+
 
 </body>
 </html>
