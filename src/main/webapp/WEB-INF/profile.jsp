@@ -12,6 +12,7 @@
         <h1>Welcome, ${sessionScope.user.username}!</h1>
         <h1>Here are all of your ads!</h1>
     </div>
+<c:forEach var="userad" items="${userAds}">
     <div class ="card" style ="width: 18rem;">
         <div class ="card-body">
             <div class ="col-md-6 row">
