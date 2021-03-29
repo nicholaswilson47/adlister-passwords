@@ -22,24 +22,31 @@
             </div>
             </c:if>
             <c:if test="${sessionScope.user == null}">
+            <div class = "m-1">
             <li class="nav-item">
                 <a class ="nav-link" href="/ads/create">Create an Ad</a>
             </li>
             </c:if>
             <c:if test="${sessionScope.user != null}">
+                <div class = "m-1">
             <li class="nav-item">
                 <a class ="nav-link" href="/profile">Your Profile</a>
             </li>
+                </div>
             </c:if>
             <c:if test="${sessionScope.user != null}">
+                    <div class = "m-1">
             <li class="nav-item">
                 <a class ="nav-link" href="/edit-profile">Edit Profile</a>
             </li>
+                    </div>
             </c:if>
             <c:if test="${sessionScope.user != null}">
+                        <div class = "m-1">
             <li class="nav-item">
                 <a class="nav-link" href="/logout">Logout</a>
             </li>
+                        </div>
             </c:if>
         </ul>
     </div>
