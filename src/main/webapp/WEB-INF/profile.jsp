@@ -30,12 +30,19 @@
                         <label for="descript">update description</label>
                         <input id="descript" name="descript" class="form-control"  type="text"  value="${userad.description}">
                     </div>
+                <input type="submit" class="btn btn-block btn-secondary">
                 </form>
             </div>
+
+        <form action ="/profile" method="post">
+            <div class="form-group">
+                <input id="adId" name="adId" class="form-control" hidden type="text"  value="${userad.id}">
+            </div>
+                <input id ="delete" type="submit" value="Delete" class="btn btn-block btn-secondary">
+        </form>
         </div>
-
     </div>
-
+</c:forEach>
 
 </body>
 </html>
